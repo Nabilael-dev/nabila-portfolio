@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Nabila El Mouatez | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4e6e81;
+      --secondary: #dbeafe;
+      --accent: #b7e5dd;
+      --bg: #f8fafc;
+      --text: #22223b;
+      --muted: #5c677d;
+      --card: #fff;
+      --border: #e2e8f0;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      padding: 2.5rem 1.25rem 2rem 1.25rem;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .header-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+      background: #fff;
+    }
+    .header-main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      min-width: 190px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+      color: #fff;
+    }
+    .hero-tagline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-top: 0.2em;
+    }
+    nav {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--accent);
+    }
+    main {
+      max-width: 830px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem 1.25rem;
+      background: transparent;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+    .section-content {
+      background: var(--card);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.3rem;
+      box-shadow: 0 2px 8px rgba(76, 97, 120, 0.035);
+      border: 1px solid var(--border);
+      font-size: 1.04rem;
+    }
+    /* Projects cards */
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+    .project-card {
+      background: var(--secondary);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 6px rgba(76, 97, 120, 0.025);
+      flex: 1 1 270px;
+      min-width: 250px;
+      max-width: 100%;
+      padding: 1.25rem 1rem 1rem 1rem;
+      transition: box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6em;
+    }
+    .project-title {
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 0.2em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+    }
+    .project-meta {
+      font-size: 0.96em;
+      color: var(--muted);
+    }
+    .project-status {
+      font-size: 0.95em;
+      font-weight: 500;
+      color: var(--primary);
+      margin-top: 0.2em;
+    }
+    /* Skills and tools */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills-category {
+      flex: 1 1 180px;
+      min-width: 160px;
+    }
+    .skills-category h3 {
+      font-size: 1.05em;
+      color: var(--primary);
+      margin-bottom: 0.4em;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+    .skills-category ul {
+      margin: 0 0 0 0.8em;
+      padding: 0;
+      list-style: disc;
+    }
+    .skills-category ul li {
+      font-size: 1em;
+      color: var(--text);
+      margin: 0.15em 0;
+    }
+    /* Writing samples */
+    .writing-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .writing-link {
+      color: var(--primary);
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    /* Contact */
+    .contact-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.65em;
+      margin-bottom: 0.6em;
+    }
+    .contact-label {
+      font-weight: 500;
+      color: var(--primary);
+    }
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      padding: 1.2rem 0;
+      text-align: center;
+      font-size: 0.98em;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      header {
+        padding: 2rem 1rem 1.5rem 1rem;
+      }
+      .header-top {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .header-main {
+        align-items: center;
+      }
+      main {
+        padding: 1.2rem 0.5rem 2.2rem 0.5rem;
+      }
+      .projects-list {
+        flex-direction: column;
+      }
+      .skills-list {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+    @media (max-width: 420px) {
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      .section-content {
+        padding: 1em 0.7em;
+      }
+      .profile-pic {
+        width: 58px;
+        height: 58px;
+      }
+    }
+    /* Utilities */
+    .sr-only {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      top: auto;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <!-- Replace the src below with your real image url or a nice placeholder -->
+      <img src="https://avatars.githubusercontent.com/u/122172097?v=4" alt="Nabila El Mouatez profile photo" class="profile-pic" />
+      <div class="header-main">
+        <div class="hero-title">Nabila El Mouatez</div>
+        <div class="hero-tagline">Self-taught learner &amp; aspiring app developer</div>
+      </div>
+    </div>
+    <nav aria-label="Main Navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills &amp; Tools</a>
+      <a href="#philosophy">My Learning Philosophy</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>🔹 About Me</h2>
+      <div class="section-content">
+        I’m a self-taught learner, educator, and aspiring app developer who’s passionate about making learning simple, engaging, and accessible, especially for young learners and professionals in Morocco.<br><br>
+        After completing the ALX Data Analytics program, I’ve been building meaningful projects that focus on real educational needs. Currently, I’m developing a mobile English learning program for kids, writing a bilingual (French/English) communication skills e-book for young professionals, and creating digital tools to support both.<br><br>
+        I love turning complex ideas into practical solutions. Whether it's through an app, a course, or a book, I aim to simplify learning using creativity, technology, and empathy. I believe that with the right tools and mindset, learning can be accessible to everyone, no matter their background or resources.
+      </div>
+    </section>
+    <section id="projects">
+      <h2>🔹 Projects</h2>
+      <div class="section-content">
+        <ul class="projects-list">
+          <li class="project-card">
+            <div class="project-title">🎓 English Learning Program for Kids</div>
+            <div class="project-meta"><strong>Format:</strong> Digital + Face-to-Face</div>
+            <div class="project-meta"><strong>Goal:</strong> Make English fun and effective for Moroccan children</div>
+            <div class="project-meta"><strong>Includes:</strong> Classroom activities + mobile practice app</div>
+            <div class="project-meta"><strong>Role:</strong> Curriculum designer, content writer, app developer</div>
+            <div class="project-status">Status: <em>Expected to launch in September 2025</em></div>
+          </li>
+          <li class="project-card">
+            <div class="project-title">📘 Communication Skills e-Book &amp; Course</div>
+            <div class="project-meta"><strong>Audience:</strong> Young professionals in Morocco</div>
+            <div class="project-meta"><strong>Focus:</strong> Practical communication skills in French and English</div>
+            <div class="project-meta"><strong>Format:</strong> e-Book + future course content</div>
+            <div class="project-meta"><strong>Role:</strong> Writer, curriculum designer, brand developer</div>
+            <div class="project-status">Status: <em>First blog post published; more content in development</em></div>
+          </li>
+          <li class="project-card">
+            <div class="project-title">💻 Learning Tools &amp; Apps</div>
+            <div class="project-meta"><strong>Purpose:</strong> Supporting the English and Communication programs</div>
+            <div class="project-meta"><strong>Tools Used:</strong> Notion, Canva, Google Sites, GitHub</div>
+            <div class="project-meta"><strong>Role:</strong> Tool &amp; app prototype developer</div>
+            <div class="project-status">Status: <em>Under development; apps prototyped in HTML, CSS, Python</em></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>🔹 Skills &amp; Tools</h2>
+      <div class="section-content">
+        <ul class="skills-list">
+          <li class="skills-category">
+            <h3>🌍 Languages</h3>
+            <ul>
+              <li>English</li>
+              <li>Arabic</li>
+              <li>French</li>
+            </ul>
+          </li>
+          <li class="skills-category">
+            <h3>🛠 Technical Tools</h3>
+            <ul>
+              <li>Excel, SQL, Python, HTML/CSS</li>
+              <li>Canva, Google Sites, GitHub</li>
+            </ul>
+          </li>
+          <li class="skills-category">
+            <h3>🤝 Soft Skills</h3>
+            <ul>
+              <li>Communication</li>
+              <li>Prioritization</li>
+              <li>Problem-solving</li>
+              <li>Simplification</li>
+              <li>Curriculum design</li>
+            </ul>
+          </li>
+          <li class="skills-category">
+            <h3>🚀 Currently Exploring</h3>
+            <ul>
+              <li>Intro to Web Development – <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener">freeCodeCamp</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="philosophy">
+      <h2>🔹 My Learning Philosophy</h2>
+      <div class="section-content">
+        I believe learning should be clear, creative, and empowering, not overwhelming. You don’t need expensive tools or perfect conditions to learn something meaningful. What matters is the way we learn and how we apply it.<br><br>
+        In every project I take on, whether it’s helping children grasp English or guiding young professionals to communicate with confidence, I focus on simplifying the process. I use visual thinking, real-world examples, and a step-by-step approach to turn complex knowledge into something anyone can understand and use.<br><br>
+        My goal is to build learning experiences that are accessible, useful, and rooted in real needs, especially in places where resources are limited but potential is high.
+      </div>
+    </section>
+    <section id="writing">
+      <h2>🔹 Writing Samples</h2>
+      <div class="section-content">
+        <ul class="writing-list">
+          <li>
+            <strong>Blog:</strong> <em>Why Communication Skills Matter in Morocco</em> (Excerpt from upcoming eBook)
+            <div style="margin-top:0.35em; color:var(--muted); font-size:1em;">
+              "In Morocco, strong communication skills aren’t just a ‘nice to have’—they’re a bridge to opportunity. Whether in French, English, or Arabic, the ability to express ideas clearly and listen actively can open doors in education, work, and everyday life..."
+            </div>
+          </li>
+          <li>
+            <strong>Coming soon:</strong> Blog – <em>How to Simplify Learning for Kids</em>
+          </li>
+          <li>
+            <a href="https://drive.google.com/drive/folders/your-placeholder-link" class="writing-link" target="_blank" rel="noopener">Google Drive Folder with Mockups &amp; Drafts</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>🔹 Contact</h2>
+      <div class="section-content">
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">📧 Email:</span>
+            <a href="mailto:nabilaelmouatez01@gmail.com" class="writing-link">nabilaelmouatez01@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">💼 LinkedIn:</span>
+            <span style="color:var(--muted);">Not active yet</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Nabila El Mouatez &mdash; Made with 💙 | <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
