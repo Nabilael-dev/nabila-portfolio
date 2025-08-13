@@ -19,140 +19,155 @@
     body {
       font-family: 'Inter', Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
     header {
       background: var(--primary);
-      padding: 3rem 1.25rem 3rem 1.25rem;
+      padding: 2.5rem 1.25rem 1rem;
       color: #fff;
       text-align: center;
       position: relative;
     }
     .profile-pic {
-      width: 270px;
-      height: 270px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 10px solid #fff;
+      border: 6px solid #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      background: #fff;
       margin-bottom: 1rem;
     }
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #fff;
+      margin-bottom: 0.3rem;
     }
     .hero-tagline {
-      font-size: 1.25rem;
+      font-size: 1rem;
       color: var(--accent);
-      margin-top: 0.2em;
+    }
+    nav {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0.7rem 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.7rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
-      max-width: 830px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 3rem 1.25rem;
-      background: transparent;
+      padding: 1.5rem;
     }
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: var(--primary);
       margin-bottom: 1rem;
-      margin-top: 0;
     }
     .section-content {
       background: var(--card);
-      border-radius: 1.25rem;
-      padding: 1.5rem 1.3rem;
+      border-radius: 1rem;
+      padding: 1.2rem;
       box-shadow: 0 2px 8px rgba(76, 97, 120, 0.035);
       border: 1px solid var(--border);
-      font-size: 1.04rem;
+      font-size: 1rem;
     }
     .projects-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      padding: 0;
+      gap: 1rem;
       list-style: none;
+      padding: 0;
       margin: 0;
     }
     .project-card {
       background: var(--secondary);
-      border-radius: 1rem;
+      border-radius: 0.8rem;
       border: 1px solid var(--border);
       box-shadow: 0 1px 6px rgba(76, 97, 120, 0.025);
-      flex: 1 1 270px;
-      min-width: 250px;
-      max-width: 100%;
-      padding: 1.25rem 1rem;
+      flex: 1 1 250px;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.6em;
+      gap: 0.5em;
     }
     .project-title {
       font-weight: 600;
-      font-size: 1.15rem;
-      margin-bottom: 0.2em;
+      font-size: 1.05rem;
       color: var(--primary);
     }
     .project-meta {
-      font-size: 0.96em;
+      font-size: 0.9em;
       color: var(--muted);
     }
     .project-status {
-      font-size: 0.95em;
+      font-size: 0.88em;
       font-weight: 500;
       color: var(--primary);
-      margin-top: 0.2em;
     }
-    .skills-list {
+    .soft-skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 2.5rem 1.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      gap: 0.5rem 1rem;
     }
-    .skills-category {
-      flex: 1 1 180px;
-      min-width: 160px;
-    }
-    .skills-category h3 {
-      font-size: 1.05em;
-      color: var(--primary);
-      margin-bottom: 0.4em;
-    }
-    .skills-category ul {
-      margin: 0 0 0 0.8em;
-      padding: 0;
-      list-style: disc;
-    }
-    .skills-category ul li {
-      font-size: 1em;
+    .soft-skills-list li {
+      background: var(--secondary);
+      padding: 0.4rem 0.7rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
       color: var(--text);
-      margin: 0.15em 0;
     }
-    .writing-list {
+    .writing-list, .contact-list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.6em;
+      gap: 0.6rem;
     }
-    .writing-list a {
+    .writing-list a, .contact-list a {
       color: var(--primary);
       text-decoration: none;
+      font-weight: 500;
     }
-    .writing-list a:hover {
+    .writing-list a:hover, .contact-list a:hover {
       text-decoration: underline;
+    }
+    .philosophy p {
+      margin: 0.7rem 0;
+    }
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
+      .hero-title {
+        font-size: 1.5rem;
+      }
+      nav a {
+        margin: 0 0.4rem;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -164,258 +179,113 @@
   <p class="hero-tagline">Self-taught learner | Aspiring App Developer | AI & EdTech Enthusiast</p>
 </header>
 
-<main>
+<nav>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#philosophy">Philosophy</a>
+  <a href="#writing">Writing</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="section-content">
-    <p>I’m a self-taught learner, educator, and aspiring app developer passionate about making learning simple, engaging, and accessible, especially for young learners and professionals in Morocco.</p>
-    <p>After completing the ALX Data Analytics program, I’ve been building projects that address real educational needs. I’m currently:</p>
-    <ul>
-      <li>Developing a mobile English learning program for kids</li>
-      <li>Writing a bilingual communication skills e-book for young professionals</li>
-      <li>Creating digital tools to support both programs</li>
-    </ul>
-    <p>I love turning complex ideas into practical solutions through apps, courses, and books. I combine creativity, technology, and empathy to make learning accessible to everyone.</p>
-  </div>
-</section>
+<main>
 
 <section id="projects">
   <h2>Projects</h2>
-  <ul class="projects-list">
-    <li class="project-card">
-      <div class="project-title">🎓 English Learning Program for Kids</div>
-      <div class="project-meta">Format: Digital + Face-to-Face<br>Goal: Make English fun and effective for Moroccan children<br>Includes: Classroom activities + mobile practice app<br>Role: Curriculum designer, content writer, app developer</div>
-      <div class="project-status">Status: Launching September 2025</div>
-    </li>
-    <li class="project-card">
-      <div class="project-title">📘 Communication Skills e-Book & Course</div>
-      <div class="project-meta">Audience: Young professionals in Morocco<br>Focus: Practical communication skills in French & English<br>Format: e-Book + future course content<br>Role: Writer, curriculum designer, brand developer</div>
-      <div class="project-status">Status: First blog post published; more content in development</div>
-    </li>
-    <li class="project-card">
-      <div class="project-title">💻 Learning Tools & Apps</div>
-      <div class="project-meta">Purpose: Support English and Communication programs<br>Tools: Notion, Canva, Google Sites, GitHub<br>Role: Tool & app prototype developer</div>
-      <div class="project-status">Status: Apps prototyped in HTML, CSS, Python</div>
-    </li>
-    <li class="project-card">
-      <div class="project-title">🧪 AI & Tech Testing Projects</div>
-      <div class="project-meta">Tested ChatGPT, Google Studio, and GitHub Copilot for web page generation<br>Compared speed, flexibility, and code quality using real prompts<br>Learned to evaluate AI tools for practical usability, integration, and customization</div>
-    </li>
-  </ul>
+  <div class="section-content">
+    <ul class="projects-list">
+      <li class="project-card">
+        <div class="project-title">🎓 English Learning Program for Kids</div>
+        <div class="project-meta">Format: Digital + Face-to-Face | Goal: Make English fun and effective for Moroccan children</div>
+        <div class="project-meta">Includes: Classroom activities + mobile practice app</div>
+        <div class="project-meta">Role: Curriculum designer, content writer, app developer</div>
+        <div class="project-status">Status: Launching September 2025</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">📘 Communication Skills e-Book & Course</div>
+        <div class="project-meta">Audience: Young professionals in Morocco | Focus: Practical communication skills in French & English</div>
+        <div class="project-meta">Format: e-Book + future course content</div>
+        <div class="project-meta">Role: Writer, curriculum designer, brand developer</div>
+        <div class="project-status">Status: First blog post published; more content in development</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">💻 Learning Tools & Apps</div>
+        <div class="project-meta">Purpose: Support English and Communication programs | Tools: Notion, Canva, Google Sites, GitHub</div>
+        <div class="project-meta">Role: Tool & app prototype developer</div>
+        <div class="project-status">Status: Apps prototyped in HTML, CSS, Python</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">🧪 AI & Tech Testing Projects</div>
+        <div class="project-meta">Tested ChatGPT, Google Studio, and GitHub Copilot for web page generation</div>
+        <div class="project-meta">Compared speed, flexibility, and code quality using real prompts</div>
+        <div class="project-meta">Learned to evaluate AI tools for practical usability, integration, and customization</div>
+      </li>
+    </ul>
+  </div>
 </section>
 
 <section id="skills">
   <h2>Skills & Tools</h2>
   <div class="section-content">
-    <ul class="skills-list">
-      <li class="skills-category">
-        <h3>Languages</h3>
-        <ul>
-          <li>English</li>
-          <li>Arabic</li>
-          <li>French</li>
-        </ul>
-      </li>
-      <li class="skills-category">
-        <h3>Technical Tools</h3>
-        <ul>
-          <li>Excel</li>
-          <li>SQL</li>
-          <li>Python</li>
-          <li>HTML/CSS</li>
-          <li>Canva</li>
-          <li>Google Sites</li>
-          <li>GitHub</li>
-        </ul>
-      </li>
-      <li class="skills-category">
-        <h3>Soft Skills</h3>
-/* Soft Skills */
-      .soft-skills-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem 1.5rem;
-      }
-      .soft-skills-list li {
-        background: var(--secondary);
-        padding: 0.5rem 0.8rem;
-        border-radius: 0.6rem;
-        font-size: 0.95rem;
-        color: var(--text);
-      }
+    <h3>Languages</h3>
+    <ul>
+      <li>English</li>
+      <li>Arabic</li>
+      <li>French</li>
+    </ul>
+    <h3>Technical Tools</h3>
+    <ul>
+      <li>Excel</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>HTML/CSS</li>
+      <li>Canva</li>
+      <li>Google Sites</li>
+      <li>GitHub</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul class="soft-skills-list">
+      <li>Communication</li>
+      <li>Prioritization</li>
+      <li>Problem-solving</li>
+      <li>Simplification</li>
+      <li>Curriculum design</li>
+    </ul>
+    <h3>Currently Exploring</h3>
+    <ul>
+      <li>Intro to Web Development</li>
+    </ul>
+  </div>
+</section>
 
-      /* Learning Philosophy */
-      .philosophy p {
-        margin: 0.8rem 0;
-      }
+<section id="philosophy">
+  <h2>My Learning Philosophy</h2>
+  <div class="section-content philosophy">
+    <p>I believe learning should be clear, creative, and empowering, not overwhelming. I focus on simplifying complex knowledge using visual thinking, real-world examples, and step-by-step guidance.</p>
+    <p>My goal is to create learning experiences that are accessible, useful, and rooted in real needs, especially in places where resources are limited but potential is high.</p>
+  </div>
+</section>
 
-      /* Writing Samples */
-      .writing-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-      .writing-list a {
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .writing-list a:hover {
-        text-decoration: underline;
-      }
+<section id="writing">
+  <h2>Writing Samples</h2>
+  <div class="section-content">
+    <ul class="writing-list">
+      <li><a href="#">Blog: Why Communication Skills Matter in Morocco</a></li>
+      <li><a href="#">Coming soon: Blog – How to Simplify Learning for Kids</a></li>
+      <li><a href="#">[Google Drive Folder with Drafts]</a></li>
+    </ul>
+  </div>
+</section>
 
-      /* Contact */
-      .contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .contact-list a {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .contact-list a:hover {
-        color: var(--primary);
-      }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="profile.jpg" alt="Nabila El Mouatez" class="profile-pic">
-    <div class="header-main">
-      <h1 class="hero-title">Nabila El Mouatez</h1>
-      <p class="hero-tagline">Self-taught learner | Aspiring App Developer | AI & EdTech Enthusiast</p>
-    </div>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="section-content">
+    <ul class="contact-list">
+      <li>📧 Email: <a href="mailto:nabilaelmouatez01@gmail.com">nabilaelmouatez01@gmail.com</a></li>
+      <li>💼 LinkedIn: <a href="#">Not active yet (can be added soon)</a></li>
+    </ul>
+  </div>
+</section>
 
-  <main>
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="section-content">
-        <ul class="projects-list">
-          <li class="project-card">
-            <div class="project-title">🎓 English Learning Program for Kids</div>
-            <div class="project-meta">Format: Digital + Face-to-Face | Goal: Make English fun and effective for Moroccan children</div>
-            <div class="project-meta">Includes: Classroom activities + mobile practice app</div>
-            <div class="project-meta">Role: Curriculum designer, content writer, app developer</div>
-            <div class="project-status">Status: Launching September 2025</div>
-          </li>
-          <li class="project-card">
-            <div class="project-title">📘 Communication Skills e-Book & Course</div>
-            <div class="project-meta">Audience: Young professionals in Morocco | Focus: Practical communication skills in French & English</div>
-            <div class="project-meta">Format: e-Book + future course content</div>
-            <div class="project-meta">Role: Writer, curriculum designer, brand developer</div>
-            <div class="project-status">Status: First blog post published; more content in development</div>
-          </li>
-          <li class="project-card">
-            <div class="project-title">💻 Learning Tools & Apps</div>
-            <div class="project-meta">Purpose: Support English and Communication programs | Tools: Notion, Canva, Google Sites, GitHub</div>
-            <div class="project-meta">Role: Tool & app prototype developer</div>
-            <div class="project-status">Status: Apps prototyped in HTML, CSS, Python</div>
-          </li>
-          <li class="project-card">
-            <div class="project-title">🧪 AI & Tech Testing Projects</div>
-            <div class="project-meta">Tested ChatGPT, Google Studio, and GitHub Copilot for web page generation</div>
-            <div class="project-meta">Compared speed, flexibility, and code quality using real prompts</div>
-            <div class="project-meta">Learned to evaluate AI tools for practical usability, integration, and customization</div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills & Tools</h2>
-      <div class="section-content">
-        <div class="skills-category">
-          <h3>Languages</h3>
-          <ul>
-            <li>English</li>
-            <li>Arabic</li>
-            <li>French</li>
-          </ul>
-        </div>
-        <div class="skills-category">
-          <h3>Technical Tools</h3>
-          <ul>
-            <li>Excel</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>Canva</li>
-            <li>Google Sites</li>
-            <li>GitHub</li>
-          </ul>
-        </div>
-        <div class="skills-category">
-          <h3>Soft Skills</h3>
-          <ul class="soft-skills-list">
-            <li>Communication</li>
-            <li>Prioritization</li>
-            <li>Problem-solving</li>
-            <li>Simplification</li>
-            <li>Curriculum design</li>
-          </ul>
-        </div>
-        <div class="skills-category">
-          <h3>Currently Exploring</h3>
-          <ul>
-            <li>Intro to Web Development</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning Philosophy Section -->
-    <section id="philosophy">
-      <h2>My Learning Philosophy</h2>
-      <div class="section-content philosophy">
-        <p>I believe learning should be clear, creative, and empowering, not overwhelming. I focus on simplifying complex knowledge using visual thinking, real-world examples, and step-by-step guidance.</p>
-        <p>My goal is to create learning experiences that are accessible, useful, and rooted in real needs, especially in places where resources are limited but potential is high.</p>
-      </div>
-    </section>
-
-    <!-- Writing Samples Section -->
-    <section id="writing">
-      <h2>Writing Samples</h2>
-      <div class="section-content">
-        <ul class="writing-list">
-          <li><a href="#">Blog: Why Communication Skills Matter in Morocco</a></li>
-          <li><a href="#">Coming soon: Blog – How to Simplify Learning for Kids</a></li>
-          <li><a href="#">[Google Drive Folder with Drafts]</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="section-content">
-        <ul class="contact-list">
-          <li>📧 Email: <a href="mailto:nabilaelmouatez01@gmail.com">nabilaelmouatez01@gmail.com</a></li>
-          <li>💼 LinkedIn: <a href="#">Not active yet (can be added soon)</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+</main>
 </body>
-    </html>
+</html> 
